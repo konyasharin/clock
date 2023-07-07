@@ -1,0 +1,60 @@
+.modal
+    &__consultation, &__buy, &__thanks
+        position: fixed
+        top: 50%
+        right: 50%
+        width: 380px
+        padding: 40px
+        background-color: #f2f2f2
+        z-index: 11
+        transform: translate(50%, -50%)
+        display: none
+        input
+            width: 300px
+            height: 50px
+            background-color: #ffffff
+            border: none
+            border-radius: 5px
+            font-size: 14px
+            font-weight: 300
+            color: #4b4b4b
+            padding-left: 25px
+            margin-top: 15px
+            &:first-child
+                margin-top: 20px
+        button
+            width: 300px
+            height: 55px
+            border: none
+            background-color: #c70101
+            border-radius: 5px
+            font-size: 16px
+            font-weight: 500
+            text-transform: uppercase
+            color: #ffffff
+            margin-top: 15px
+    &__title
+        font-size: 18px
+        font-weight: 700
+        color: #0d0d0d
+        text-align: center
+    &__text
+        font-size: 14px
+        font-weight: 500
+        color: #0d0d0d
+        text-align: center
+    &__close
+        content: url("../../icons/close.png")
+        display: block
+        position: absolute
+        cursor: pointer
+        top: 0
+        right: -45px
+.overflow
+    background-color: rgba(0, 0, 0, .56)
+    position: fixed
+    top: 0
+    width: 100vw
+    height: 100vh
+    z-index: 10
+    display: none
