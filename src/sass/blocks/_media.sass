@@ -1,1 +1,123 @@
-@media (max-width: 400px) 
+@media (max-width: 991px)
+    .container
+        width: 720px
+        max-width: none
+    .advantages
+        &__wrapper
+            flex-direction: column
+            align-items: center
+            justify-content: start
+        &__base
+            margin-top: 80px
+            &:first-child
+                margin-top: 0
+    .carousel
+        .container
+            width: 720px
+        &__inner
+            width: 720px
+    .carousel
+        padding-bottom: 0
+        img
+            width: 500px
+        .container
+            width: 540px
+    .catalog
+        &__tab
+            width: 200px
+        &__content
+            justify-content: space-around
+@media (max-width: 767px)
+    .container
+        width: 540px
+    .header__official
+        display: none
+    .carousel
+        img
+            width: 400px
+        .container
+            width: 410px
+@media (max-width: 575px)
+    .container
+        width: 304px
+    .header
+        flex-direction: column
+        .header__official
+            display: block
+            margin-top: 20px
+            margin-bottom: 10px
+    .promo
+        &__wrapper
+            margin-top: 60px
+        &__header
+            font-size: 32px
+            text-align: center
+        &__subheader
+            font-size: 20px
+            text-align: center
+        &__icons
+            width: 280px
+        &__icon
+            font-size: 12px
+            img
+                width: 25px
+        .button_main
+            width: 280px
+            margin: 0 auto
+            margin-top: 15px
+    .consultation
+        .title_left
+            font-size: 28px
+    .feed-form
+        width: 280px
+    .carousel
+        img
+            width: 220px
+        .container
+            width: 240px
+        .prev
+            left: -20px
+            img
+                width: 20px
+                height: 40px
+        .next
+            right: -20px
+            img
+                width: 20px
+                height: 40px
+    .catalog
+        padding-bottom: 20px
+        &__tabs
+            flex-direction: column
+            margin-top: 30px
+        &__tab
+            &:nth-child(2)
+                margin-top: 10px
+                margin-bottom: 20px
+    .reviews
+        &-item
+            flex-direction: column
+            &__text
+                margin-top: 20px
+    .footer
+        &__info
+            width: 280px
+            height: 200px
+        &__address
+            font-size: 16px
+            margin-top: 25px
+    .modal
+        &__consultation, &__buy, &__thanks
+            width: 280px
+            padding: 10px
+            input
+                width: 260px
+            button
+                width: 260px
+        &__title
+            font-size: 16px
+        &__text
+            font-size: 12px
+        &__close
+            top: -35px
+            right: 10px

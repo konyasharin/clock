@@ -31,4 +31,46 @@ $(document).ready(function(){
     };
     toggleSlide('.catalog-item__link')
     toggleSlide('.catalog-item__back')
+
+
+    const btns = document.querySelectorAll('.button'),
+          overflow = document.querySelector('.overflow'),
+          modalConsultation = document.querySelector('.modal__consultation'),
+          modalBuy = document.querySelector('.modal__buy'),
+          modalClose = document.querySelectorAll('.modal__close'),
+          forms = document.querySelectorAll('form'),
+          modalThanks = document.querySelector('.modal__thanks');
+
+    btns.forEach(btn => {
+        if(btn.textContent.toUpperCase() === 'ЗАКАЗАТЬ ЗВОНОК' || (btn.textContent.toUpperCase() === 'ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ' && !btn.classList.contains('button_submit'))){
+            btn.addEventListener('click', () => {
+                modalConsultation.style.display = 'block';
+                overflow.style.display = 'block';
+            })
+        }else if(btn.textContent.toUpperCase() == 'КУПИТЬ'){
+            btn.addEventListener('click', () => {
+                modalBuy.style.display = 'block';
+                overflow.style.display = 'block';
+            })
+        }
+    })
+
+    forms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            modalBuy.style.display = 'none';
+            modalConsultation.style.display = 'none';
+            modalThanks.style.display = 'block'
+            overflow.style.display = 'block';
+            form.reset();
+        })
+    })
+    modalClose.forEach(close => {
+        close.addEventListener('click', () => {
+            modalConsultation.style.display = 'none';
+            overflow.style.display = 'none';
+            modalBuy.style.display = 'none';
+            modalThanks.style.display = 'none'
+        })
+    })
 });
